@@ -51,12 +51,19 @@ class UserMenu extends AbstractHelper implements ServiceManagerAwareInterface
         if ($this->auth->getIdentity() != null) {
             $router = $this->servicemanager->get('router');
             $request = $this->servicemanager->get('request');
-            
+
             if ($router->match($request) && $router->match($request)->getMatchedRouteName() == 'ipo') {
                 $html .= "<li><a href=\"" . $urlHelper('application') . "\">Interface OPE</a></li>";
             } else {
                 if ($this->auth->isGranted('ipo.read')) {
                     $html .= "<li><a href=\"" . $urlHelper('ipo') . "\">Interface IPO</a></li>";
+                }
+            }
+            if ($router->match($request) && $router->match($request)->getMatchedRouteName() == 'agenda') {
+                $html .= "<li><a href=\"" . $urlHelper('application') . "\">Interface OPE</a></li>";
+            } else {
+                if ($this->auth->isGranted('agenda.read')) {
+                    $html .= "<li><a href=\"" . $urlHelper('agenda') . "\">Interface Agenda</a></li>";
                 }
             }
             if ($router->match($request) && $router->match($request)->getMatchedRouteName() == 'administration') {
