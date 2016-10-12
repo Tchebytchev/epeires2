@@ -1,0 +1,328 @@
+# Webalizer V2.23-08 Incremental Data - 10/07/2016 14:05:53
+2016 10 7 14 5 53
+23124 8571 1 89 14 1 61868490 20535 25 0 0 0
+1 36 1853 4 7
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+102 2 172039 1 84 2 0 0
+5645 2913 12269051 1 4714 4 0 0
+12301 5656 26816142 1 10661 19 0 0
+5076 0 22611258 1 5076 1 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+360 0 1603656 360 0 0
+360 0 1603656 360 0 0
+360 0 1603656 360 0 0
+360 0 1603656 360 0 0
+360 0 1603656 360 0 0
+360 0 1603656 360 0 0
+360 0 1602198 360 0 0
+360 0 1603656 360 0 0
+360 0 1603656 360 0 0
+360 0 1603656 360 0 0
+930 362 5915379 548 0 0
+1958 932 5228028 1689 0 0
+2537 1000 4108720 2349 0 0
+3582 1672 6280591 3250 0 0
+2126 1236 6323132 1625 0 0
+1428 777 765805 1428 0 0
+1897 966 3770677 1521 0 0
+1631 715 2221408 1410 0 0
+1621 911 3191561 1303 0 0
+374 0 1613463 372 0 0
+360 0 1603656 360 0 0
+360 0 1603656 360 0 0
+360 0 1603656 360 0 0
+360 0 1603656 360 0 0
+0
+0
+0
+8571
+0
+0
+0
+0
+0
+0
+0
+0
+6
+0
+6546
+0
+0
+0
+339
+0
+45
+7518
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+99
+0
+0
+0
+0
+0
+# -urls- 
+/components/bootstrap/dist/css/bootstrap.min.css.map
+0 3 0 3080 0 0 0 0
+/admin/roles
+0 4 0 17035 0 0 0 0
+/events/getcategories
+0 31 0 18060 1 0 0 0
+/components/pick-a-color/build/1.2.3/css/pick-a-color-1.2.3.min.css
+0 6 7218544943381505396 21345 0 0 0 0
+/components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2
+0 3 0 99834 0 0 0 0
+/components/fullcalendar/dist/lang/fr.js
+0 24 0 36024 0 0 0 0
+/assets/js/noty.topMiddleCenter.js
+0 32 0 49681 0 0 0 0
+/components/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js
+0 28 0 202916 0 0 0 0
+/components/fuelux/dist/css/fuelux.min.css
+0 19 0 240525 0 0 0 0
+/events/testAuthentication
+0 2719 0 1541577 1 5 0 0
+/events/getevents
+0 2878 0 1623764 0 8 0 0
+/assets/js/application.js
+0 116 0 730636 0 0 0 0
+/components/fullcalendar/dist/fullcalendar.min.css
+0 19 0 68837 0 0 0 0
+/components/bootstrap-material-design/dist/fonts/Material-Design-Icons.woff
+0 5 0 103345 0 0 0 0
+/ipo/report/newreport
+0 1 7218544943381505396 1037 0 0 0 0
+/components/bootstrap-material-design/dist/js/material.min.js
+0 28 0 49560 0 0 0 0
+/events/getNumberEventsTab
+0 523 0 354256 6 0 0 0
+/components/bootstrap-material-design/dist/fonts/RobotoDraftItalic.woff2
+0 4 0 14218 0 0 0 0
+/assets/css/jquery.timepicker.css
+0 32 0 51149 0 0 0 0
+/admin/users
+0 1 0 3494 0 0 0 0
+/components/bootstrap-material-design/dist/js/material.min.js.map
+0 3 0 3080 0 0 0 0
+/components/fuelux/dist/js/fuelux.min.js
+0 19 0 581780 0 0 0 0
+/components/momentjs/min/moment.min.js
+0 28 0 369320 0 0 0 0
+/components/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css
+0 28 0 38298 0 0 0 0
+/favicon.ico
+0 4 0 3270 0 0 0 0
+/assets/js/search.js
+0 32 0 73802 0 0 0 0
+/assets/css/google_material_font.css
+0 116 0 135316 0 0 0 0
+/components/pick-a-color/build/1.2.3/js/pick-a-color-1.2.3.min.js
+0 6 0 40017 0 0 0 0
+/ipo
+0 17 0 37360 0 0 0 0
+/Agenda
+0 3 0 3264 1 2 0 0
+/components/bootstrap-material-design/dist/fonts/RobotoDraftMedium.woff2
+0 1 0 12148 0 0 0 0
+/assets/js/alarm.js
+0 32 0 62541 0 0 0 0
+/assets/js/jquery.ui.timeline.js
+0 32 0 385559 0 0 0 0
+/assets/js/headerbar.js
+0 32 0 110765 0 0 0 0
+/alarm/getalarms
+0 2907 0 1122896 6 1 0 0
+/img/favicon.ico
+0 7 0 3018 0 0 0 0
+/components/bootstrap-material-design/dist/fonts/RobotoDraftRegular.woff2
+0 3 0 12448 0 0 0 0
+/components/jquery-validation/dist/jquery.validate.min.js
+0 8 0 58482 0 0 0 0
+/components/jquery-mousewheel/jquery.mousewheel.min.js
+0 23 0 38594 0 0 0 0
+/components/bootstrap-material-design/dist/css/ripples.min.css
+0 98 0 82818 0 0 0 0
+/assets/js/users.js
+0 1 0 1209 0 0 0 0
+/components/bootstrap-material-design/dist/js/ripples.min.js
+0 28 0 43400 0 0 0 0
+/components/bootstrap-material-design/dist/js/ripples.min.js.map
+0 3 0 3080 0 0 0 0
+/admin/config
+0 1 7218544943381505396 3089 0 0 0 0
+/components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff
+0 6 0 24860 0 0 0 0
+/components/jquery/dist/jquery.min.js
+0 98 0 2954342 0 0 0 0
+/components/bootstrap-material-design/dist/css/roboto.min.css
+0 98 0 71560 0 0 0 0
+/components/jquery/dist/jquery.min.map
+0 3 0 3080 0 0 0 0
+/agenda
+0 9 0 15766 1 0 0 0
+/components/bootstrap-material-design/dist/fonts/RobotoDraftBold.woff2
+0 3 0 12324 0 0 0 0
+/assets/css/core.css
+0 41 0 106723 0 0 0 0
+/events/getIPO
+0 2998 0 1920226 0 0 0 0
+/assets/js/ipo.js
+0 15 0 16071 0 0 0 0
+/assets/js/jquery.timepicker.js
+0 32 0 89555 0 0 0 0
+/events/geteventsFC
+0 754 0 477829 0 1 0 0
+/components/noty/js/noty/packaged/jquery.noty.packaged.min.js
+0 98 0 532224 0 0 0 0
+/events/getshifthours
+0 31 0 15256 6 0 0 0
+/events/saveview
+0 19 0 10152 0 5 0 0
+/assets/css/form.css
+0 32 7218544943381505396 80156 0 0 0 0
+/
+0 41 15656 244252 0 0 0 0
+/components/jquery-form/jquery.form.js
+0 19 0 237291 0 0 0 0
+/components/jquery-ui/jquery-ui.min.js
+0 98 0 6445262 0 0 0 0
+/components/momentjs/locale/fr.js
+0 19 0 25137 0 0 0 0
+/assets/js/form.js
+0 32 0 245790 0 0 0 0
+/assets/img/loading.gif
+1 29 0 173384 0 0 0 0
+/components/arrive/minified/arrive.min.js
+0 24 0 53658 0 0 0 0
+/components/bootstrap-material-design/dist/css/material-epeirespalette.min.css.map
+0 3 0 3080 0 0 0 0
+/assets/js/roles.js
+0 4 0 3805 0 0 0 0
+/events/saveday
+0 2 0 1135 0 0 0 0
+/assets/css/ipo.css
+0 15 0 16764 0 0 0 0
+/admin/home
+0 6 0 19202 0 0 0 0
+/admin/roles/addpermission
+0 3 0 1562 0 0 0 0
+/admin
+0 1 26 2436 0 0 0 0
+/components/i18next/i18next.min.js
+0 23 0 279243 0 0 0 0
+/components/bootstrap/dist/css/bootstrap.min.css
+0 98 0 1986484 0 0 0 0
+/assets/js/fileupload.js
+0 32 0 74983 0 0 0 0
+/assets/js/i18n/fr_FR.json
+0 34 0 11464 0 0 0 0
+/components/fullcalendar/dist/fullcalendar.min.js
+0 28 0 961421 0 0 0 0
+/events/changefield
+0 24 0 30738 0 0 0 0
+/undefinedevents/testAuthentication
+0 12 0 13697 0 0 0 0
+/assets/css/application.css
+0 107 0 322359 0 0 0 0
+/assets/css/fullcalendar.material.css
+0 32 0 58859 0 0 0 0
+/assets/css/admin.css
+0 86 0 117665 0 0 0 0
+/components/bootstrap-material-design/dist/css/material-epeirespalette.min.css
+0 28 0 786306 0 0 0 0
+/components/tinycolor/dist/tinycolor-min.js
+0 6 0 31869 0 0 0 0
+/components/bootstrap/dist/js/bootstrap.min.js
+0 98 0 1006190 0 0 0 0
+/components/jquery-validation/src/localization/messages_fr.js
+0 8 0 10697 0 0 0 0
+/components/jquery-stupid-table/stupidtable.min.js
+0 28 0 33768 0 0 0 0
+/assets/css/timeline.css
+0 32 0 91111 0 0 0 0
+# End Of Table - urls
+# -sites- (monthly)
+172.20.65.18
+0 23124 8571 61868490 25 1475849153 0 0
+-
+# End Of Table - sites (monthly)
+# -sites- (daily)
+172.20.65.18
+0 5076 0 22611258 1 1475849153 0 0
+-
+# End Of Table - sites (daily)
+# -referrers- 
+https://epeire-dev.crna.est/assets/css/application.css
+0 29
+https://epeire-dev.crna.est/ipo
+0 206
+https://epeire-dev.crna.est/components/bootstrap/dist/css/bootstrap.min.css
+0 156
+https://epeire-dev.crna.est/album
+0 4
+https://epeire-dev.crna.est/Agenda
+0 888
+- (Direct Request)
+0 452
+https://epeire-dev.crna.est/agenda
+0 6974
+https://epeire-dev.crna.est/components/bootstrap-material-design/dist/css/material-epeirespalette.min.css
+0 5
+https://epeire-dev.crna.est/components/bootstrap-material-design/dist/css/roboto.min.css
+0 11
+https://epeire-dev.crna.est/admin/users
+0 8
+https://epeire-dev.crna.est/admin/home
+0 87
+https://epeire-dev.crna.est/admin/config
+0 4
+https://epeire-dev.crna.est/admin/roles
+0 99
+https://epeire-dev.crna.est/
+0 14201
+# End Of Table - referrers
+# -agents- 
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0
+0 23124
+# End Of Table - agents
+# -search strings- 
+# End Of Table - search strings
+# -usernames- 
+# End Of Table - usernames
