@@ -4,21 +4,21 @@
     "license": "AGPL-3.0",
     "homepage": "http://vulcain.do.aviation/projects/pvcds",
     "repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/BrunoSpy/DoctrineMigrationsModule"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/kipperlenny/opentbsbundle"
+		},
         {
-            "type": "vcs",
-            "url": "https://github.com/BrunoSpy/DoctrineMigrationsModule"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/kipperlenny/opentbsbundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/BrunoSpy/DoctrineDataFixtureModule"
+          "type": "vcs",
+          "url": "https://github.com/BrunoSpy/DoctrineDataFixtureModule"
         }
-    ],
+	],
     "require": {
-        "php": ">=5.5.0",
+        "php": ">=5.6.0",
         "zendframework/zend-mvc": "2.5.* || 2.6.*",
         "zendframework/zend-view": "^2.5",
         "zendframework/zend-log": "^2.5",
@@ -51,7 +51,7 @@
         "phpunit/phpunit": "^5.1",
         "hounddog/doctrine-data-fixture-module": "dev-master",
         "satooshi/php-coveralls": "dev-master",
-        "codeception/codeception": "^2.2"
+        "codeception/codeception": "^2.2.1"
     },
     "autoload-dev": {
         "psr-4": {
