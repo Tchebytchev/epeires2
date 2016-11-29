@@ -1,0 +1,108 @@
+/* 
+    Author     : Bruno Spyckerelle
+*/
+
+body {
+	padding-top: 54px;
+}
+
+tr.child {
+    display: none;
+}
+
+#calendar {
+    float:left;
+    text-align: center;
+    width: 100%;
+}
+
+#calendar p {
+    margin-bottom:0px;
+}
+
+#calendar input {
+    height: 10px;
+    margin-bottom: 0px;
+    width: 71px;
+}
+
+
+.report-sidenav {
+    margin: 30px 0px 0px;
+    padding: 0px;
+    background-color: #FFF;
+    border-radius: 6px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.067);
+}
+
+.report-sidenav > li:first-child > a {
+    border-radius: 6px 6px 0px 0px;
+}
+
+.report-sidenav > li:last-child > a {
+    border-radius: 0px 0px 6px 6px;
+}
+
+.report-sidenav > li > a {
+    display: block;
+    margin: 0px 0px -1px;
+    padding: 8px 14px;
+    border: 1px solid #E5E5E5;
+}
+
+.report-sidenav .icon-chevron-right {
+    float: right;
+    margin-top: 2px;
+    margin-right: -6px;
+    opacity: 0.25;
+}
+
+.report-sidenav.affix {
+    width: 22.55%;
+}
+
+:target:before {
+  content:"";
+  display:block;
+  height:60px; /* fixed header height*/
+  margin:-60px 0 0; /* negative fixed header height */
+}
+
+
+.tooltip.tooltip-actions .tooltip-arrow {
+    border-bottom-color: rgb(101, 101, 101);
+    border-top-color: rgb(101, 101, 101);
+    display: block;
+
+}
+
+.tooltip.tooltip-actions.top {
+    margin-top: 0px;
+}
+
+.tooltip.tooltip-actions.bottom {
+    margin-top: 0px;
+}
+
+.tooltip.tooltip-actions .tooltip-inner {
+    max-width: 250px;
+}
+
+.tooltip.tooltip-actions .table td {
+    padding: 0px;
+    line-height: 1.1;
+}
+
+.tooltip.tooltip-actions .table tr {
+    text-align: left;
+    border-bottom: 1px dashed #9D9D9D;
+}
+
+.tooltip.tooltip-actions .table > tbody > tr > td {
+    border-top: none;
+    vertical-align: middle;
+}
+
+.tooltip.tooltip-actions .table {
+    margin-bottom: 3px;
+}

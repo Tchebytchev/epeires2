@@ -51,16 +51,33 @@ class UserMenu extends AbstractHelper implements ServiceManagerAwareInterface
         if ($this->auth->getIdentity() != null) {
             $router = $this->servicemanager->get('router');
             $request = $this->servicemanager->get('request');
-            
+
             if ($router->match($request) && $router->match($request)->getMatchedRouteName() == 'ipo') {
                 $html .= "<li><a href=\"" . $urlHelper('application') . "\">Interface OPE</a></li>";
-            } else {
-                if ($this->auth->isGranted('ipo.read')) {
-                    $html .= "<li><a href=\"" . $urlHelper('ipo') . "\">Interface IPO</a></li>";
+                if ($this->auth->isGranted('agenda.read')) {
+                    $html .= "<li><a href=\"" . $urlHelper('agenda') . "\">Interface Agenda</a></li>";
                 }
+            } if($router->match($request) && $router->match($request)->getMatchedRouteName() == 'application') {
+                    if ($this->auth->isGranted('ipo.read')) {
+                        $html .= "<li><a href=\"" . $urlHelper('ipo') . "\">Interface IPO</a></li>";
+                    }
+                    if ($this->auth->isGranted('agenda.read')) {
+                        $html .= "<li><a href=\"" . $urlHelper('agenda') . "\">Interface Agenda</a></li>";
+                    }
+            } if($router->match($request) && $router->match($request)->getMatchedRouteName() == 'agenda'){
+                        $html .= "<li><a href=\"" . $urlHelper('application') . "\">Interface OPE</a></li>";
+                        if ($this->auth->isGranted('agenda.read')) {
+                            $html .= "<li><a href=\"" . $urlHelper('ipo') . "\">Interface IPO</a></li>";
+                        }
             }
             if ($router->match($request) && $router->match($request)->getMatchedRouteName() == 'administration') {
                 $html .= "<li><a href=\"" . $urlHelper('application') . "\">Interface OPE</a></li>";
+                if ($this->auth->isGranted('ipo.read')) {
+                    $html .= "<li><a href=\"" . $urlHelper('ipo') . "\">Interface IPO</a></li>";
+                }
+                if ($this->auth->isGranted('agenda.read')) {
+                    $html .= "<li><a href=\"" . $urlHelper('agenda') . "\">Interface Agenda</a></li>";
+                }
             } else {
                 if ($this->auth->isGranted('admin.access') || $this->auth->isGranted('admin.centre') || $this->auth->isGranted('admin.users') || $this->auth->isGranted('admin.categories') || $this->auth->isGranted('admin.models') || $this->auth->isGranted('admin.radio')) {
                     $html .= "<li><a href=\"" . $urlHelper('administration', array(
