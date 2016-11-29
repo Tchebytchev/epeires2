@@ -3,6 +3,8 @@
  * This makes our life easier when dealing with paths. Everything is relative
  * to the application root now.
  */
+ini_set('error_reporting', E_ALL);
+
 chdir(dirname(__DIR__));
 
 define('ROOT_PATH', dirname(__DIR__));
