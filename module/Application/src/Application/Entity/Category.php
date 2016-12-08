@@ -171,6 +171,14 @@ class Category
      */
     protected $exclude = false;
 
+    /**
+     * Select if the category is OPE or AGENDA INTERFACE
+     * @ORM\Column(type="boolean")
+     * @Annotation\Type("Zend\Form\Element\Checkbox")
+     * @Annotation\Options({"label":"Interface AGENDA"})
+     */
+    protected $agenda = false;
+
     public function __construct()
     {
         $this->events = new ArrayCollection();
@@ -302,6 +310,14 @@ class Category
 
     public function setExclude($exclude) {
         $this->exclude = $exclude;
+    }
+
+    public function isAgenda() {
+        return $this->agenda;
+    }
+
+    public function setAgenda($agenda) {
+        $this->agenda = $agenda;
     }
 
     public function getFieldname()
