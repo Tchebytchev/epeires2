@@ -34,7 +34,8 @@ $modules = array(
     'Core',
     'Application',
     'Administration',
-    'IPO'
+    'IPO',
+    'Agenda'
 );
 
 if ($env == 'development') {

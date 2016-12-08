@@ -28,7 +28,7 @@ return array(
                     ),
                     'defaults' => array(
                         '__NAMESPACE__' => 'Agenda\Controller',
-                        'controller' => 'Planning',
+                        'controller' => 'Agenda',
                         'action' => 'index'
                     )
                 )
@@ -72,7 +72,7 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Agenda\Controller\Planning' => 'Agenda\Controller\PlanningController'
+            'Agenda\Controller\Agenda' => 'Agenda\Controller\AgendaController'
         )
     ),
     'view_manager' => array(

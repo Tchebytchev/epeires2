@@ -27,7 +27,7 @@ use Zend\View\Model\JsonModel;
  */
 
 
-class PlanningController extends AbstractActionController
+class AgendaController extends AbstractActionController
 {
 /*
     public function indexAction()
@@ -76,5 +76,6 @@ class PlanningController extends AbstractActionController
             }
 
         return $e;
-    }*/
+    }
+*/
 }
