@@ -1,0 +1,66 @@
+<?php $this->headScript()->appendFile($this->basePath() . '/assets/js/ipo.js')?>
+<?php
+
+$formatter = \IntlDateFormatter::create(
+		\Locale::getDefault(),
+		\IntlDateFormatter::FULL,
+		\IntlDateFormatter::FULL,
+		'UTC',
+		\IntlDateFormatter::GREGORIAN, 'dd/MM/YYYY' );
+?>
+<div class="container-fluid">
+
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>Derniers rapports</h1>
+	           <table class="table table-striped sortable" id="reports-table">
+				<thead>
+					<tr>
+						<th data-sort="string">Nom</th>
+						<th data-sort="string">Date de création</th>
+						<th data-sort="int">Semaine n°</th>
+						<th><a id="add-report" href="#report-container" data-toggle="modal" class="btn btn-sm btn-primary">Nouveau rapport</a></th>
+					</tr>
+				</thead>
+				<tbody>
+	           <?php
+					foreach ( $this->reports as $report ) {
+						echo '<tr id="report-'.$report->getId().'">';
+						echo "<td>" . $report->getName() . "</td>";
+						echo "<td>" . $formatter->format ( $report->getCreatedOn () ) . "</td>";
+						echo "<td>" . $report->getWeek () . "/" . $report->getYear () . "</td>";
+						echo '<td>';
+						//echo '<a href="#report-container" data-toggle="modal" class="mod-report" data-id="'.$report->getId().'" data-name="'.$report->getName().'" title="Modifier les propriétés"><i class="icon-pencil"></i></a>';
+						echo '<a href="'. $this->url('ipo', array('controller' => 'report', 'action' => 'show'), array('query' => array('id' => $report->getId()))) .'" title="Visualiser et classer les évènements"><span class="glyphicon glyphicon-th-list"></span></a>';
+	            		echo ' <a href="'.$this->url('ipo', array('controller' => 'report', 'action' => 'export')).'?id='.$report->getId().'" class="send-report" data-id="'.$report->getId().'" title="Télécharger"><span class="glyphicon glyphicon-download-alt"></span></a>';
+	            		echo ' <a href="#remove-report-container" data-id="'.$report->getId().'" data-name="'.$report->getName().'" data-toggle="modal" class="remove-report" title="Supprimer"><span class="glyphicon glyphicon-trash"></span></a>
+	            			</td>';
+						echo "</tr>";
+					}
+				?>
+	           </tbody>
+			</table>
+			<?php if(count($this->reports) == 0): ?>
+				<p>Aucun rapport en base de données.</p>
+           	<?php endif;?>
+        </div>
+	</div>
+</div>
+
+<?php echo $this->modalwindow("report-container", "<h3 id=\"report-title\"></h3>", "", "<div id=\"report-form\"></div>")?>
+
+<?php echo $this->modalwindow("remove-report-container",
+						"<h3>Confirmer la suppression ?</h3>",
+						"", 
+						null, 
+						"<p>Voulez-vous vraiment supprimer le rapport <em><span id=\"report-name\"></span></em> ?</p>",
+						"<a class=\"btn btn-danger\" id=\"remove-report-href\">Confirmer</a>
+						<a class=\"btn\" href=\"#\" data-dismiss=\"modal\" aria-hidden=\"true\">Annuler</a>") ?>	
+
+<?php $this->inlineScript()->captureStart();?>
+
+setUrl('<?php echo $this->url('ipo'); ?>');
+
+<?php echo $this->notifications($this->messages); ?>
+
+<?php $this->inlineScript()->captureEnd();?>
