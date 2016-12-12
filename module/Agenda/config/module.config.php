@@ -91,6 +91,12 @@ return array(
             __DIR__ . '/../view/agenda'
         )
     ),
+    'view_helpers' => array(
+        'factories' => array(
+            'navbaragenda' => 'Agenda\Factory\NavBarAgendaFactory'
+        )
+    ),
+
     /**
      * Automatically use module assets
      */

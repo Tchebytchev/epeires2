@@ -1836,7 +1836,7 @@ class EventsController extends TabController
         $objectManager = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
         $qb = $objectManager->createQueryBuilder();
         $qb->select('c')->from('Application\Entity\Category', 'c');
-        
+
         $rootonly = $this->params()->fromQuery('rootonly', true);
         $timeline = $this->params()->fromQuery('timeline', true);
         $cats = $this->params()->fromQuery('cats', null);

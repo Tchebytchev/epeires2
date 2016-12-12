@@ -73,8 +73,7 @@ class EventRepository extends ExtendedRepository
             ->leftJoin('e.category', 'c')
             ->leftJoin('c.parent', 'p')
             ->andWhere($qb->expr()
-            ->isNull('e.parent')); // display only root events
-        
+                ->isNull('e.parent')); // display only root events
         if ($cats) {
             $qb->andWhere($qb->expr()
                 ->in('e.category', $cats));
