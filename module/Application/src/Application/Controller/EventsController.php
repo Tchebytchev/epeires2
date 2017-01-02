@@ -1840,6 +1840,7 @@ class EventsController extends TabController
         $rootonly = $this->params()->fromQuery('rootonly', true);
         $timeline = $this->params()->fromQuery('timeline', true);
         $cats = $this->params()->fromQuery('cats', null);
+        $agenda = $this->params()->fromQuery('agenda', true);
         if ($cats) {
             $categories = $objectManager->getRepository('Application\Entity\Category')->findBy(array(
                 'id' => $cats
@@ -1861,6 +1862,10 @@ class EventsController extends TabController
         if ($timeline == true) {
             $qb->andWhere($qb->expr()
                 ->eq('c.timeline', true));
+        }
+        if ($agenda == true) {
+            $qb->andWhere($qb->expr()
+                ->eq('c.agenda', true));
         }
         $qb->orderBy("c.place", 'ASC');
         $categories = $qb->getQuery()->getResult();

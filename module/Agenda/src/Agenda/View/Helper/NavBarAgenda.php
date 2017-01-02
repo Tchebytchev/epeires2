@@ -74,8 +74,8 @@ class NavBarAgenda extends AbstractHelper
         
 
 
-        // Determine custom tabs to be displayed
-        /*
+        // Determine custom tabs to be displayed in agenda
+
         $tabs = $em->getRepository('Application\Entity\Tab')->findBy(array(), array(
             'place' => 'ASC'
         ));
@@ -83,7 +83,7 @@ class NavBarAgenda extends AbstractHelper
         foreach ($tabs as $tab) {
             if ($this->view->hasRole($tab->getReadRoleNames())) {
                 $html .= '<li><a class="customtab" id="tab-' . $tab->getId() . '" href="' . $urlHelper('application', array(
-                    'controller' => 'tabs',
+                    'controller' => 'agenda',
                     'action' => 'index'
                 ), array(
                     'query' => array(
@@ -92,7 +92,10 @@ class NavBarAgenda extends AbstractHelper
                 )) . '">';
                 $html .= $tab->getName() . '</a></li>';
             }
-        }*/
+        }
+
+
+
         $html .= '</ul>';
         $html .= '<form class="navbar-form navbar-right" role="search" id="search">';
         $html .= '<div class="form-group form-group-material-'.$color.'-500 has-feedback">';

@@ -27,55 +27,50 @@ use Zend\View\Model\JsonModel;
  */
 
 
-class AgendaController extends AbstractActionController
+class AgendaController extends \Application\Controller\TabsController
 {
-/*
     public function indexAction()
     {
-        $em = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+        parent::indexAction();
 
-        $reports = $em->getRepository('Agenda\Entity\Report')->findBy(array(), array(
-            'created_on' => 'ASC'
-        ), 10, 0);
+        $return = array();
 
-        return array(
-            'reports' => $reports
-        );
-    }
+        if ($this->flashMessenger()->hasErrorMessages()) {
+            $return['error'] = $this->flashMessenger()->getErrorMessages();
+        }
 
-    public function getEventsAction()
-    {
-        $em = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+        if ($this->flashMessenger()->hasSuccessMessages()) {
+            $return['success'] = $this->flashMessenger()->getSuccessMessages();
+        }
 
-        $events = array();
+        $this->flashMessenger()->clearMessages();
 
-        return new JsonModel($events);
-    }
+        $objectManager = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
 
-    private function getEventJson($event)
-    {
-        $eventservice = $this->getServiceLocator()->get('EventService');
-        $customfieldservice = $this->getServiceLocator()->get('CustomFieldService');
+        $tabid = $this->params()->fromQuery('tabid', null);
 
-        $e = array();
-        $e['id'] = $event->getId();
-        $e['name'] = $eventservice->getName($event);
-        $e['category'] = $event->getCategory()->getName();
-        $e['isroot'] = $event->getParent() ? false : true;
-        $e['status'] = $event->getStatus() ? $event->getStatus()->getName() : '';
-        $e['start_date'] = ($event->getStartdate() ? $event->getStartdate()->format(DATE_RFC2822) : null);
-        $e['end_date'] = ($event->getEnddate() ? $event->getEnddate()->format(DATE_RFC2822) : null);
-        if ($event->isPunctual()) {
-            $e['duration'] = 'Ponctuel';
-        } else
-            if ($event->getEnddate()) {
-                $diff = \Core\DateTime\MyDateInterval::createFromDateInterval($event->getEnddate()->diff($event->getStartdate()));
-                $e['duration'] = $diff->formatWithoutZeroes('%y année(s)', '%m mois', '%d jour(s)', '%h heure(s)', '%i minute(s)', '%s seconde(s)');
+        if ($tabid) {
+            $tab = $objectManager->getRepository('Application\Entity\Tab')->find($tabid);
+            if ($tab) {
+                $categories = $tab->getCategories();
+                $cats = array();
+                foreach ($categories as $cat) {
+                    $cats[] = $cat->getId();
+                }
+                $this->viewmodel->setVariable('onlyroot', $tab->isOnlyroot());
+                $this->viewmodel->setVariable('cats', $cats);
+                $this->viewmodel->setVariable('tabid', $tabid);
             } else {
-                $e['duration'] = 'Non terminé';
+                $return['error'][] = "Impossible de trouver l'onglet correspondant. Contactez votre administrateur.";
             }
+        } else {
+            $return['error'][] = "Aucun onglet défini. Contactez votre administrateur.";
+        }
 
-        return $e;
+        $this->viewmodel->setVariables(array(
+            'messages' => $return
+        ));
+
+        return $this->viewmodel;
     }
-*/
 }
