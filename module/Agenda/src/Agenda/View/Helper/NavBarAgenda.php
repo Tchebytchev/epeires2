@@ -52,10 +52,8 @@ class NavBarAgenda extends AbstractHelper
         $html .= '<ul class="nav navbar-nav navbar-center">';
         $html .= '<li class="dropdown active">';
         $html .= '<a id="home" href="';
-        $html .= $urlHelper('application', 
-                            array(
-                                'controller' => 'events',
-                                'action' => 'index'
+        $html .= $urlHelper('agenda',
+                            array(''
         ));
         $html .= '" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                   <span class="glyphicon glyphicon-home"></span> Évènements <span class="caret"></span></a>'
