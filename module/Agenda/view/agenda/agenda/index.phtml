@@ -139,8 +139,14 @@ if($this->cats) {
 
     $('#timeline').timeline({
     controllerUrl: '<?php echo $this->url('application', array('controller' => 'events', '')) ?>',
-    eventUrl: '<?php echo $this->url('application', array('controller' => 'events', ''))?>'+'/getevents',
-    categoriesUrl: '<?php echo $this->url('application', array('controller' => 'events', ''))?>'+'/getcategories',
+    eventUrl: '<?php echo $this->url('application', array('controller' => 'events', 'action' => 'getevents'),
+                                                    array('query' => array('cats' => $this->cats)))?>',
+    categoriesUrl: '<?php echo $this->url('application',
+                                            array('controller' => 'events', 'action' => 'getcategories'),
+                                                    array('query' => array('rootonly' => ($this->onlyroot ? true : false),
+                                                                            'cats' => $this->cats,
+                                                                            'timeline' => false,
+                                                                            'agenda' => true))) ?>',
     topOffset: 100,
     leftOffset: 120,
     rightOffset: 85,
