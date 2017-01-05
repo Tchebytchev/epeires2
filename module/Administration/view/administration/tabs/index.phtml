@@ -18,6 +18,7 @@
                                         <th>Catégories associées</th>
                                         <th>Rôles autorisés</th>
                                         <th data-toggle="tooltip" data-container="body" title="Nécessite la sélection de la catégorie racine dans la liste des catégories associées">Catégories racines seulement<sup>?</sup></th>
+                                        <th>Interface AGENDA</th>
                                         <th><a class="btn btn-xs btn-primary" href="#tab-container" data-toggle="modal" id="add-tab">Ajouter</a></th>
                                     </tr>
                                     </thead>
@@ -67,6 +68,7 @@
                                             }
                                             echo '</td>';
                                             echo '<td><span class="'.($tab->isOnlyroot() ? 'glyphicon glyphicon-ok' : 'glyphicon glyphicon-remove' ).'"></span></td>';
+                                            echo '<td><span class="'.($tab->isAgenda() ? 'glyphicon glyphicon-ok' : 'glyphicon glyphicon-remove' ).'"></span></td>';
                                             echo '<td><a '
                                                     . 'href="#tab-container" '
                                                     . 'class="mod-tab" '

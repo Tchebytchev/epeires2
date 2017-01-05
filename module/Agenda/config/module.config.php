@@ -72,7 +72,8 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Agenda\Controller\Agenda' => 'Agenda\Controller\AgendaController'
+            'Agenda\Controller\Agenda' => 'Agenda\Controller\AgendaController',
+            'Agenda\Controller\Tabs' => 'Agenda\Controller\TabsController'
         )
     ),
     'view_manager' => array(

@@ -53,8 +53,10 @@ class NavBarAgenda extends AbstractHelper
         $html .= '<li class="dropdown active">';
         $html .= '<a id="home" href="';
         $html .= $urlHelper('agenda',
-                            array(''
-        ));
+            array(
+                'controller' => 'agenda',
+                'action' => 'index'
+            ));
         $html .= '" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                   <span class="glyphicon glyphicon-home"></span> Évènements <span class="caret"></span></a>'
             . '<ul class="dropdown-menu dropdown-menu-material-purple-300">'
@@ -74,14 +76,14 @@ class NavBarAgenda extends AbstractHelper
 
         // Determine custom tabs to be displayed in agenda
 
-        $tabs = $em->getRepository('Application\Entity\Tab')->findBy(array(), array(
+        $tabs = $em->getRepository('Application\Entity\Tab')->findBy(array('agenda' => '1'), array(
             'place' => 'ASC'
         ));
-        ;
+
         foreach ($tabs as $tab) {
             if ($this->view->hasRole($tab->getReadRoleNames())) {
-                $html .= '<li><a class="customtab" id="tab-' . $tab->getId() . '" href="' . $urlHelper('application', array(
-                    'controller' => 'agenda',
+                $html .= '<li><a class="customtab" id="tab-' . $tab->getId() . '" href="' . $urlHelper('agenda', array(
+                    'controller' => 'tabs',
                     'action' => 'index'
                 ), array(
                     'query' => array(

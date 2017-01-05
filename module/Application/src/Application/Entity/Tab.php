@@ -89,6 +89,14 @@ class Tab
      */
     protected $onlyroot = false;
 
+    /**
+     * Select if the tab is OPE INTERFACE or AGENDA INTERFACE
+     * @ORM\Column(type="boolean")
+     * @Annotation\Type("Zend\Form\Element\Checkbox")
+     * @Annotation\Options({"label":"Interface AGENDA"})
+     */
+    protected $agenda = false;
+
     public function __construct()
     {
         $this->categories = new ArrayCollection();
@@ -128,6 +136,14 @@ class Tab
     public function isOnlyroot()
     {
         return $this->onlyroot;
+    }
+
+    public function isAgenda() {
+        return $this->agenda;
+    }
+
+    public function setAgenda($agenda) {
+        $this->agenda = $agenda;
     }
 
     public function getCategories()
