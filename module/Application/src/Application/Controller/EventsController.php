@@ -1840,7 +1840,7 @@ class EventsController extends TabController
         $rootonly = $this->params()->fromQuery('rootonly', true);
         $timeline = $this->params()->fromQuery('timeline', true);
         $cats = $this->params()->fromQuery('cats', null);
-        $agenda = $this->params()->fromQuery('agenda', null);
+        $agenda = $this->params()->fromQuery('agenda', false);
         if ($cats) {
             $categories = $objectManager->getRepository('Application\Entity\Category')->findBy(array(
                 'id' => $cats

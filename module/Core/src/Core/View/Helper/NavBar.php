@@ -90,7 +90,7 @@ class NavBar extends AbstractHelper
         }
         
         // Determine custom tabs to be displayed
-        $tabs = $em->getRepository('Application\Entity\Tab')->findBy(array(), array(
+        $tabs = $em->getRepository('Application\Entity\Tab')->findBy(array('agenda' => '0'), array(
             'place' => 'ASC'
         ));
         ;
@@ -101,7 +101,8 @@ class NavBar extends AbstractHelper
                     'action' => 'index'
                 ), array(
                     'query' => array(
-                        'tabid' => $tab->getId()
+                        'tabid' => $tab->getId(),
+                        'agenda' => false
                     )
                 )) . '">';
                 $html .= $tab->getName() . '</a></li>';
